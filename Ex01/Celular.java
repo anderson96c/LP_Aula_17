@@ -20,11 +20,11 @@ public class Celular extends ProdutoDuravel
 	 *
 	 * Construtor 'super' herdado da classe ProdutoDuravel
 	 */
-	public Celular(String nome_, double preco_, String marca_, String descricao_, String data_fab_,
-                       String materialPred_, int durabilidade_, String operadora_)
+	public Celular(String id_, String nome_, double preco_, String marca_, String descricao_, String data_fab_,
+                       String materialPred_, int durabilidade_, boolean avaria_, String operadora_)
 	{
-		super(nome_, preco_, marca_, descricao_, data_fab_,
-		      materialPred_, durabilidade_);
+		super(id_, nome_, preco_, marca_, descricao_, data_fab_,
+		      materialPred_, durabilidade_, avaria_);
 
 		operadora = operadora_;
 		bateria = 100;
@@ -84,6 +84,11 @@ public class Celular extends ProdutoDuravel
 	public void recarregar()
 	{
 		bateria = 100;
+	}
+
+	public boolean eletro()
+	{
+		return true;
 	}
 
 }

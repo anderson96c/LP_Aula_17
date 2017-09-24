@@ -22,24 +22,24 @@ public class Main
 		*/
 		////////////////////////////////////////////////////////////////////////////////////////////////
 
-		Pizza pizza1 = new Pizza("Moda da casa", 35.00, "Domino's", "Indescritivel!", "23/08/2017", "24/08/2017", "Alimenticio",
+		Pizza pizza1 = new Pizza("54676","Moda da casa", 35.00, "Domino's", "Indescritivel!", "23/08/2017", "24/08/2017", "Alimenticio",
 					 "Calabresa, Frango, Carne, Cheddar e Catupiry", 12);
 		////////////////////////////////////////////////////////////////////////////////////////////////
 
-		Chocolate chocolate1 = new Chocolate("Laka", 4.50, "Lacta", "Chocolate Branco", "16/05/2017", "16/11/2017", "Alimenticio",
+		Chocolate chocolate1 = new Chocolate("894984","Laka", 4.50, "Lacta", "Chocolate Branco", "16/05/2017", "16/11/2017", "Alimenticio",
 						     "Branco", 24);
 		////////////////////////////////////////////////////////////////////////////////////////////////
 
-		Refrigerante refri1 = new Refrigerante("Coca-Cola", 6.00, "Coca-Cola", "Pode conter coisas que te matem lentamente por 								dentro", "23/08/2017", "23/08/2019", "Alimenticio", "Cola", 2.5);
+		//Refrigerante refri1 = new Refrigerante("541984""Coca-Cola", 6.00, "Coca-Cola", "Pode conter coisas que te matem lentamente por 								dentro", "23/08/2017", "23/08/2019", "Alimenticio", "Cola", 2.5);
 		////////////////////////////////////////////////////////////////////////////////////////////////
 
-		Carro carro1 = new Carro("Uninho da firma", 8500.00, "Fiat", "Com uma escada pode chegar próximo à velocidade da luz", 						 "2001", "Metal", 30, "Uno", 450.6);
+		Carro carro1 = new Carro("189451","Uninho da firma", 8500.00, "Fiat", "Com uma escada pode chegar próximo à velocidade da luz", 						 "2001", "Metal", 30, true, "Uno", 450.6);
 		////////////////////////////////////////////////////////////////////////////////////////////////
 
-		Livro livro1 = new Livro("O nome do vento", 50.00, "Arqueiro", "Simplesmente épico!", "2007", "Papel", 50, 656);
+		//Livro livro1 = new Livro("55198""O nome do vento", 50.00, "Arqueiro", "Simplesmente épico!", "2007", "Papel", 50, 656);
 		////////////////////////////////////////////////////////////////////////////////////////////////		
 
-		Celular celular1 = new Celular("Galaxy S8", 2800.00, "Samsung", "...", "2017", "Metal", 5, "Oi");
+		Celular celular1 = new Celular("19849","Galaxy S8", 2800.00, "Samsung", "...", "2017", "Metal", 5, false, "Oi");
 		////////////////////////////////////////////////////////////////////////////////////////////////
 
 		/**
@@ -79,7 +79,7 @@ public class Main
 		System.out.println();
 		System.out.println("**************************************************************");
 		////////////////////////////////////////////////////////////////////////////////////////////////
-
+		/*
 		System.out.println("O refrigerante de " + refri1.getSabor() + " tem " + refri1.getLitros() + " litros");
 
 		System.out.println("Testando a função 'drink()' ...");
@@ -90,6 +90,7 @@ public class Main
 
 		System.out.println();
 		System.out.println("**************************************************************");
+		*/
 		////////////////////////////////////////////////////////////////////////////////////////////////
 	
 		System.out.println("O " + carro1.getModelo() + " já andou " + carro1.getQuilometros() + " quilometro");
@@ -102,7 +103,7 @@ public class Main
 		System.out.println();
 		System.out.println("**************************************************************");
 		////////////////////////////////////////////////////////////////////////////////////////////////
-
+		/*
 		System.out.println("O livro " + livro1.getNome() + " tem " + livro1.getPaginas() + " paginas e ja foram lidas " +
 				  livro1.getPagMarcador() + " paginas");
 
@@ -114,6 +115,7 @@ public class Main
 
 		System.out.println();
 		System.out.println("**************************************************************");
+		*/
 		////////////////////////////////////////////////////////////////////////////////////////////////
 
 		System.out.println("O " + celular1.getNome() + " da operadora " + celular1.getOperadora() + " está com " +
@@ -154,9 +156,7 @@ public class Main
 
 		deposit.addItem(pizza1);
 		deposit.addItem(chocolate1);
-		deposit.addItem(refri1);
 		deposit.addItem(carro1);	
-		deposit.addItem(livro1);
 		deposit.addItem(celular1);
 		
 		if(deposit.isEmpty())

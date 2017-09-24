@@ -9,7 +9,8 @@
 *
 *@Autor Anderson Caio da Fonseca Santos
 */
-abstract public class ProdutoNaoDuravel extends Produto
+import java.util.*;
+public abstract class ProdutoNaoDuravel extends Produto
 {
 	//Atributos de um ProdutoNaoDuravel
 	private String dataVal;
@@ -76,14 +77,14 @@ abstract public class ProdutoNaoDuravel extends Produto
 	/**
 	 * Imprime todos os atributos na tela
 	 */
-	public void print()
+	public String toString()
 	{
-		super.print();
-		System.out.println("Validade: " + dataVal);
-		System.out.println("Genero: " + genero);
+		return super.toString() + "\n" +"Validade: " + dataVal + "\n" +"Genero: " + genero;
 	}
-
-	abstract public boolean presta(String data);
-
+	
+	public boolean podeVender()
+	{
+		return true;
+	}
 
 }

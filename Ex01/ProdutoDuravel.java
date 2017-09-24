@@ -10,11 +10,12 @@
 *@Autor Anderson Caio da Fonseca Santos
 */
 
-abstract public class ProdutoDuravel extends Produto
+public abstract class ProdutoDuravel extends Produto
 {
 	//Atributos de um ProdutoDuravel
 	private String materialPred;
 	private int durabilidade;
+	private boolean avaria;
 	
 	/**
 	 * Método construtor da classe
@@ -23,13 +24,14 @@ abstract public class ProdutoDuravel extends Produto
 	 */
 
 	public ProdutoDuravel(String id_, String nome_, double preco_, String marca_, String descricao_, String data_fab_,
-                              String materialPred_, int durabilidade_)
+                              String materialPred_, int durabilidade_, boolean avaria_)
 	{
 		super(id_, nome_, preco_, marca_, descricao_, data_fab_);
 
 		materialPred = materialPred_;
 		durabilidade = durabilidade_;
-	}
+		avaria = avaria_;
+	}	
 
 	/**
 	 *Substitui o atributo material predominante pelo parametro passado
@@ -78,17 +80,16 @@ abstract public class ProdutoDuravel extends Produto
 	/**
 	 * Imprime todos os atributos na tela
 	 */
-	public void print()
+	public String toString()
 	{
-		super.print();
-		System.out.println("Material Predominante: " + materialPred);
-		System.out.println("Durabilidae: " + durabilidade);
+		return super.toString() + "\n" + "Material Predominante: " + materialPred + "\n" + "Durabilidae: " + durabilidade;
 	}
 
-	public boolean vendido()
+	public boolean podeVender()
 	{
-		return false;
+		return !avaria;
 	}
+
 
 	public abstract boolean eletro();
 

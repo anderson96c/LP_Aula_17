@@ -20,10 +20,10 @@ public class Pizza extends ProdutoNaoDuravel
 	 *
 	 * Construtor 'super' herdado da classe ProdutoNaoDuravel
 	 */
-	public Pizza(String nome_, double preco_, String marca_, String descricao_, String data_fab_,
+	public Pizza(String id_, String nome_, double preco_, String marca_, String descricao_, String data_fab_,
                               String dataVal_, String genero_, String sabor_, int pedacos_)
 	{
-		super(nome_, preco_,marca_, descricao_, data_fab_,
+		super(id_, nome_, preco_,marca_, descricao_, data_fab_,
                       dataVal_, genero_);
 
 		sabor = sabor_;

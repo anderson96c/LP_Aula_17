@@ -10,7 +10,7 @@
 *
 *@Autor Anderson Caio da Fonseca Santos
 */
-abstract public class Produto
+public abstract class Produto
 {	
 	//Atributos de um produto
 	private String id;
@@ -148,15 +148,9 @@ abstract public class Produto
 	/**
 	 * Imprime todos os atributos na tela
 	 */
-	public void print()
+	public String toString()
 	{
-		System.out.println("ID: " + id);
-		System.out.println("Nome: " + nome);
-		System.out.println("Preço " + preco);
-		System.out.println("Marca: " + marca);
-		System.out.println("Descrição: " + descricao);
-		System.out.println("Fabricação: " + data_fab);
+		return "ID: " + id + "\n" + "Nome: " + nome + "\n" + "Preço " + preco + "\n" + "Marca: " + marca + "\n" + "Descrição: " + descricao + "\n" + "Fabricação: " + data_fab;
 	}
-
-	abstract public boolean vendido();
+		public abstract boolean podeVender();
 }

@@ -20,11 +20,11 @@ public class Carro extends ProdutoDuravel
 	 *
 	 * Construtor 'super' herdado da classe ProdutoDuravel
 	 */
-	public Carro(String nome_, double preco_, String marca_, String descricao_, String data_fab_,
-                     String materialPred_, int durabilidade_, String modelo_, double quilometros_)
+	public Carro(String id_,String nome_, double preco_, String marca_, String descricao_, String data_fab_,
+                     String materialPred_, int durabilidade_,boolean avaria_, String modelo_, double quilometros_)
 	{
-		super(nome_, preco_, marca_, descricao_, data_fab_,
-		      materialPred_, durabilidade_);
+		super(id_, nome_, preco_, marca_, descricao_, data_fab_,
+		      materialPred_, durabilidade_, avaria_);
 
 		modelo = modelo_;
 		quilometros = quilometros_;
@@ -59,6 +59,11 @@ public class Carro extends ProdutoDuravel
 	public void drive(double q)
 	{
 		quilometros = quilometros + q;
+	}
+
+	public boolean eletro()
+	{
+		return false;
 	}
 
 }
